@@ -46,9 +46,8 @@
             this.pesanKmrTab = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.floorComboBox = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.jenisComboBox = new System.Windows.Forms.ComboBox();
             this.nextButton = new System.Windows.Forms.Button();
-            this.totalTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.hariNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -76,6 +75,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabAryaHotel.SuspendLayout();
             this.informasiTab.SuspendLayout();
             this.pesanKmrTab.SuspendLayout();
@@ -244,9 +244,7 @@
             // 
             this.pesanKmrTab.Controls.Add(this.label8);
             this.pesanKmrTab.Controls.Add(this.floorComboBox);
-            this.pesanKmrTab.Controls.Add(this.comboBox2);
             this.pesanKmrTab.Controls.Add(this.nextButton);
-            this.pesanKmrTab.Controls.Add(this.totalTextBox);
             this.pesanKmrTab.Controls.Add(this.label7);
             this.pesanKmrTab.Controls.Add(this.label5);
             this.pesanKmrTab.Controls.Add(this.hariNumericUpDown);
@@ -288,17 +286,18 @@
             this.floorComboBox.Size = new System.Drawing.Size(63, 28);
             this.floorComboBox.TabIndex = 39;
             // 
-            // comboBox2
+            // jenisComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.jenisComboBox.FormattingEnabled = true;
+            this.jenisComboBox.Items.AddRange(new object[] {
             "Single",
             "Double",
             "Suite"});
-            this.comboBox2.Location = new System.Drawing.Point(644, 138);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(197, 28);
-            this.comboBox2.TabIndex = 38;
+            this.jenisComboBox.Location = new System.Drawing.Point(186, 89);
+            this.jenisComboBox.Name = "jenisComboBox";
+            this.jenisComboBox.Size = new System.Drawing.Size(197, 28);
+            this.jenisComboBox.TabIndex = 38;
+            this.jenisComboBox.SelectedIndexChanged += new System.EventHandler(this.jenisComboBox_SelectedIndexChanged);
             // 
             // nextButton
             // 
@@ -308,15 +307,6 @@
             this.nextButton.TabIndex = 37;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
-            // 
-            // totalTextBox
-            // 
-            this.totalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.totalTextBox.Location = new System.Drawing.Point(711, 325);
-            this.totalTextBox.Multiline = true;
-            this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(130, 47);
-            this.totalTextBox.TabIndex = 36;
             // 
             // label7
             // 
@@ -435,7 +425,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.jenisComboBox);
             this.panel2.Location = new System.Drawing.Point(461, 52);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(446, 411);
@@ -583,6 +575,14 @@
             this.tabPage4.Text = "CheckOut";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(246, 283);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(134, 36);
+            this.label21.TabIndex = 41;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -637,9 +637,8 @@
         private System.Windows.Forms.TabPage pesanKmrTab;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox floorComboBox;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox jenisComboBox;
         private System.Windows.Forms.Button nextButton;
-        private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown hariNumericUpDown;
@@ -667,5 +666,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label21;
     }
 }
