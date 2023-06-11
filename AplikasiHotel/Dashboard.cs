@@ -113,5 +113,51 @@ namespace AplikasiHotel
                 floorComboBox.SelectedItem = "3";
             }
         }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            int lamaMenginap = Convert.ToInt32(hariNumericUpDown.Value);
+            int hargaPerMalam = 0;
+
+            if (jenisComboBox.SelectedItem.Equals("Single"))
+            {
+                hargaPerMalam = 750000;
+            }
+            else if (jenisComboBox.SelectedItem.Equals("Double"))
+            {
+                hargaPerMalam = 1000000;
+            }
+            else if (jenisComboBox.SelectedItem.Equals("Suite"))
+            {
+                hargaPerMalam = 1500000;
+            }
+
+            int totalAmount = hargaPerMalam * lamaMenginap;
+
+            labelTotalHarga.Text = totalAmount.ToString();
+        }
+
+        private void btnCek_Click(object sender, EventArgs e)
+        {
+            if (comboBoxJenisKamar.SelectedItem.Equals("Single"))
+            {
+                labelInformasiHarga.Text = "750000";
+            }
+            else if (comboBoxJenisKamar.SelectedItem.Equals("Double"))
+            {
+                labelInformasiHarga.Text = "1000000";
+            }
+            else if (comboBoxJenisKamar.SelectedItem.Equals("Suite"))
+            {
+                labelInformasiHarga.Text = "1500000";
+            }
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
     }
 }
