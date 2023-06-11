@@ -114,5 +114,10 @@ namespace AplikasiHotel
                 MessageBox.Show(config.Login_gagal);
             }
         }
+
+        private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
