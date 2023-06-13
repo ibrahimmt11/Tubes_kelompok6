@@ -79,6 +79,11 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.namaCheckOutTextBox = new System.Windows.Forms.TextBox();
+            this.noKamarCheckOutTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.checkOutButton = new System.Windows.Forms.Button();
             this.tabAryaHotel.SuspendLayout();
             this.informasiTab.SuspendLayout();
             this.pesanKmrTab.SuspendLayout();
@@ -88,6 +93,7 @@
             this.cekKmrTab.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label9
@@ -650,6 +656,11 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.checkOutButton);
+            this.tabPage4.Controls.Add(this.label8);
+            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Controls.Add(this.noKamarCheckOutTextBox);
+            this.tabPage4.Controls.Add(this.namaCheckOutTextBox);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
@@ -658,6 +669,50 @@
             this.tabPage4.TabIndex = 6;
             this.tabPage4.Text = "CheckOut";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // namaCheckOutTextBox
+            // 
+            this.namaCheckOutTextBox.Location = new System.Drawing.Point(175, 130);
+            this.namaCheckOutTextBox.Name = "namaCheckOutTextBox";
+            this.namaCheckOutTextBox.Size = new System.Drawing.Size(158, 22);
+            this.namaCheckOutTextBox.TabIndex = 0;
+            this.namaCheckOutTextBox.TextChanged += new System.EventHandler(this.namaCheckOutTextBox_TextChanged);
+            // 
+            // noKamarCheckOutTextBox
+            // 
+            this.noKamarCheckOutTextBox.Location = new System.Drawing.Point(556, 130);
+            this.noKamarCheckOutTextBox.Name = "noKamarCheckOutTextBox";
+            this.noKamarCheckOutTextBox.Size = new System.Drawing.Size(158, 22);
+            this.noKamarCheckOutTextBox.TabIndex = 1;
+            this.noKamarCheckOutTextBox.TextChanged += new System.EventHandler(this.noKamarCheckOutTextBox_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(172, 111);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Nama";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(553, 111);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "No Kamar";
+            // 
+            // checkOutButton
+            // 
+            this.checkOutButton.Location = new System.Drawing.Point(339, 241);
+            this.checkOutButton.Name = "checkOutButton";
+            this.checkOutButton.Size = new System.Drawing.Size(200, 52);
+            this.checkOutButton.TabIndex = 4;
+            this.checkOutButton.Text = "CheckOut";
+            this.checkOutButton.UseVisualStyleBackColor = true;
+            this.checkOutButton.Click += new System.EventHandler(this.checkOutButton_Click);
             // 
             // Dashboard
             // 
@@ -690,6 +745,8 @@
             this.panel3.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -747,5 +804,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button checkOutButton;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox noKamarCheckOutTextBox;
+        private System.Windows.Forms.TextBox namaCheckOutTextBox;
     }
 }
