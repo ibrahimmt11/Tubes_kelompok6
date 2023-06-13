@@ -47,6 +47,8 @@ namespace AplikasiHotel
         }
 
         //FITUR PESAN MAKAN
+
+        //Menampilkan Menu Yang Tersedia 
         private void label21_Click(object sender, EventArgs e)
         {
             string menuText = "Menu Makanan Tersedia:\n";
@@ -59,12 +61,12 @@ namespace AplikasiHotel
             label2.Text = menuText;
         }
 
+        //button untuk melakukan pemesanan 
         private void btnPesan_Click(object sender, EventArgs e)
         {
             int nomorMakanan;
             if (int.TryParse(inputmakanan.Text, out nomorMakanan))
             {
-                // Mengecek apakah nomor makanan ada dalam daftar menu
                 if (menuMakanan.ContainsKey(nomorMakanan))
                 {
                     string makanan = menuMakanan[nomorMakanan];
