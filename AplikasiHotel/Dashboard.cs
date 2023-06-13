@@ -353,5 +353,72 @@ namespace AplikasiHotel
             loginPage.Show();
             this.Hide();
         }
+
+        private void checkOutButton_Click(object sender, EventArgs e)
+        {
+            string namaPemesan = namaCheckOutTextBox.Text;
+            int nomorKamar;
+
+            if (int.TryParse(noKamarCheckOutTextBox.Text, out nomorKamar))
+            {
+                if (nomorKamar >= 101 && nomorKamar <= 109)
+                {
+                    int index = nomorKamar - 101;
+                    if (status1[index] == "terisi")
+                    {
+                        status1[index] = "tersedia";
+                        MessageBox.Show("Check out berhasil untuk kamar nomor " + nomorKamar);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kamar dengan nomor " + nomorKamar + " belum dipesan");
+                    }
+                }
+                else if (nomorKamar >= 201 && nomorKamar <= 209)
+                {
+                    int index = nomorKamar - 201;
+                    if (status2[index] == "terisi")
+                    {
+                        status2[index] = "tersedia";
+                        MessageBox.Show("Check out berhasil untuk kamar nomor " + nomorKamar);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kamar dengan nomor " + nomorKamar + " belum dipesan");
+                    }
+                }
+                else if (nomorKamar >= 301 && nomorKamar <= 309)
+                {
+                    int index = nomorKamar - 301;
+                    if (status3[index] == "terisi")
+                    {
+                        status3[index] = "tersedia";
+                        MessageBox.Show("Check out berhasil untuk kamar nomor " + nomorKamar);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kamar dengan nomor " + nomorKamar + " belum dipesan");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Nomor kamar tidak valid");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nomor kamar harus berupa angka");
+            }
+        }
+
+        private void namaCheckOutTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void noKamarCheckOutTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
