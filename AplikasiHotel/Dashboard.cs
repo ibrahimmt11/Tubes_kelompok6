@@ -58,7 +58,7 @@ namespace AplikasiHotel
 
             foreach (var menuItem in menuMakanan)
             {
-                menuText += $"{menuItem.Key}. {menuItem.Value}\n";
+                menuText += $"{menuItem.Key}. {SanitizeInput(menuItem.Value)}\n";
             }
 
             label2.Text = menuText;
@@ -68,12 +68,12 @@ namespace AplikasiHotel
         private void btnPesan_Click(object sender, EventArgs e)
         {
             int nomorMakanan;
-            if (int.TryParse(inputmakanan.Text, out nomorMakanan))
+            if (int.TryParse(SanitizeInput(inputmakanan.Text), out nomorMakanan))
             {
                 if (menuMakanan.ContainsKey(nomorMakanan))
                 {
                     string makanan = menuMakanan[nomorMakanan];
-                    statusPemesanan.Text = "Pemesanan berhasil: " + makanan;
+                    statusPemesanan.Text = "Pemesanan berhasil: " + SanitizeInput(makanan);
                 }
                 else
                 {
@@ -84,6 +84,12 @@ namespace AplikasiHotel
             {
                 statusPemesanan.Text = "Nomor makanan harus berupa angka";
             }
+        }
+
+        private string SanitizeInput(string input)
+        {
+            // Menghilangkan karakter yang tidak diinginkan atau berpotensi membahayakan
+            return input.Trim();
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
