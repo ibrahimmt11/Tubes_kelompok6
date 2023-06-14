@@ -23,9 +23,26 @@ namespace AplikasiHotel
         List<string> status1 = new List<string>() { "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia" };
         List<string> status2 = new List<string>() { "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia" };
         List<string> status3 = new List<string>() { "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia", "tersedia" };
+        List<Pesanan> daftarPesanan = new List<Pesanan>();
+
         int jmlKmr1 = 9;
         int jmlKmr2 = 9;
         int jmlKmr3 = 9;
+
+
+        public class Pesanan
+        {
+            public string Nama { get; set; }
+            public string Email { get; set; }
+            public string JenisKamar { get; set; }
+            public int LamaMenginap { get; set; }
+            public int TotalAmount { get; set; }
+        }
+
+        private Pesanan pesanan;
+
+
+
 
         Dictionary<int, string> menuMakanan = new Dictionary<int, string>()
         {
@@ -144,6 +161,14 @@ namespace AplikasiHotel
                 return;
             }
 
+            // Memeriksa validitas format email RIDWAN
+            string emailInput = emailTextBox.Text;
+            if (!IsValidEmail(emailInput))
+            {
+                MessageBox.Show("Format email tidak valid.");
+                return;
+            }
+
             // Memeriksa lama menginap
             int lamaMenginap = Convert.ToInt32(hariNumericUpDown.Value);
             if (lamaMenginap == 0)
@@ -193,6 +218,14 @@ namespace AplikasiHotel
             if (string.IsNullOrEmpty(namaTextBox.Text) || string.IsNullOrEmpty(emailTextBox.Text))
             {
                 isDataValid = false; // Tandai data tidak valid
+                return;
+            }
+
+            // Memeriksa validitas format email  RIDWAN
+            string emailInput = emailTextBox.Text;
+            if (!IsValidEmail(emailInput))
+            {
+                MessageBox.Show("Format email tidak valid.");
                 return;
             }
 
@@ -255,12 +288,13 @@ namespace AplikasiHotel
                 return;
             }
 
-            // Mengosongkan pengisian
-            namaTextBox.Text = string.Empty;
+            // Mengosongkan pengisian RIDWAN (gw gini in biar method riwayat gw bisa jalan)
+            /*namaTextBox.Text = string.Empty;
             emailTextBox.Text = string.Empty;
             hariNumericUpDown.Value = 0;
             jenisComboBox.SelectedIndex = -1;
             totalLabel.Text = string.Empty;
+            */
         }
 
 
@@ -421,6 +455,101 @@ namespace AplikasiHotel
 
         private void noKamarCheckOutTextBox_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void BtnPesanJasa_Click(object sender, EventArgs e)
+        {
+            string selectedItem = comboBoxJasa.SelectedItem.ToString(); // Mendapatkan item yang dipilih dari ComboBox
+            string message = "";
+
+            // Mencari item yang cocok di dalam ListBox
+            foreach (string item in listBoxJasa.Items)
+            {
+                if (item.StartsWith(selectedItem))
+                {
+                    message = "Anda telah memesan " + selectedItem + ". Terima kasih!";
+                    MessageBox.Show(message); // Menampilkan pesan yang cocok dari ListBox
+                    break; // Keluar dari perulangan setelah menemukan item yang cocok
+                }
+            }
+        }
+        //Method untuk memvalidasi jika email yang di masukan valid atau tidak
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var mailAddress = new System.Net.Mail.MailAddress(email);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            // Memeriksa apakah nama dan email telah diisi(secure code)
+            if (string.IsNullOrEmpty(namaTextBox.Text) || string.IsNullOrEmpty(emailTextBox.Text))
+            {
+                MessageBox.Show("Data belum tersedia.");
+                return;
+            }
+
+            // Memvalidasi format email sebelum menggunakannya
+            string emailInput = emailTextBox.Text;
+            if (!IsValidEmail(emailInput))
+            {
+                MessageBox.Show("Format email tidak valid.");
+                return;
+            }
+
+            // Mengambil data yang telah dipilih oleh pengguna
+            string nama = namaTextBox.Text;
+            string email = emailTextBox.Text;
+            string jenisKamar = jenisComboBox.SelectedItem?.ToString();
+            int lamaMenginap = Convert.ToInt32(hariNumericUpDown.Value);
+            int totalHarga = Convert.ToInt32(totalLabel.Text);
+
+            // Membuat objek Pesanan baru
+            Pesanan pesananBaru = new Pesanan
+            {
+                Nama = nama,
+                Email = email,
+                JenisKamar = jenisKamar,
+                LamaMenginap = lamaMenginap,
+                TotalAmount = totalHarga
+            };
+
+            // Memeriksa apakah data pesanan baru berbeda dengan pesanan sebelumnya
+            if (!IsPesananAlreadyExists(pesananBaru))
+            {
+                // Menambahkan pesanan baru ke daftarPesanan
+                daftarPesanan.Add(pesananBaru);
+
+                // Menambahkan data pemesanan ke dataGridView1
+                dataGridView1.Rows.Add(pesananBaru.Nama, pesananBaru.Email, pesananBaru.JenisKamar, pesananBaru.TotalAmount, pesananBaru.LamaMenginap);
+            }
+        }
+
+        //Method untuk mengecek apakah data reservasi sudah masuk datagrid atau belum 
+        //untuk mencegah duplikasi (secure code)
+        private bool IsPesananAlreadyExists(Pesanan pesanan)
+        {
+            foreach (Pesanan pesananExisting in daftarPesanan)
+            {
+                // Lakukan perbandingan antara data pesanan baru dengan pesanan yang sudah ada
+                if (pesanan.Nama == pesananExisting.Nama &&
+                    pesanan.Email == pesananExisting.Email &&
+                    pesanan.JenisKamar == pesananExisting.JenisKamar &&
+                    pesanan.LamaMenginap == pesananExisting.LamaMenginap &&
+                    pesanan.TotalAmount == pesananExisting.TotalAmount)
+                {
+                    return true; // Pesanan sudah ada dalam daftarPesanan
+                }
+            }
+            return false; // Pesanan belum ada dalam daftarPesanan
 
         }
     }
