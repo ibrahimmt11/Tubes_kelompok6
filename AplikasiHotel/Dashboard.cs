@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -348,10 +349,10 @@ namespace AplikasiHotel
             loginPage.Show();
             this.Hide();
         }
-
+        //CheckOut
         private void checkOutButton_Click(object sender, EventArgs e)
         {
-            string namaPemesan = namaCheckOutTextBox.Text;
+            string namaPemesan = namaCheckOutTextBox.Text.Trim();
             int nomorKamar;
 
             if (int.TryParse(noKamarCheckOutTextBox.Text, out nomorKamar))
@@ -359,7 +360,7 @@ namespace AplikasiHotel
                 if (nomorKamar >= 101 && nomorKamar <= 109)
                 {
                     int index = nomorKamar - 101;
-                    if (status1[index] == "terisi")
+                    if (string.Equals(status1[index], "terisi", StringComparison.Ordinal))
                     {
                         status1[index] = "tersedia";
                         MessageBox.Show("Check out berhasil untuk kamar nomor " + nomorKamar);
@@ -372,7 +373,7 @@ namespace AplikasiHotel
                 else if (nomorKamar >= 201 && nomorKamar <= 209)
                 {
                     int index = nomorKamar - 201;
-                    if (status2[index] == "terisi")
+                    if (string.Equals(status2[index], "terisi", StringComparison.Ordinal))
                     {
                         status2[index] = "tersedia";
                         MessageBox.Show("Check out berhasil untuk kamar nomor " + nomorKamar);
@@ -385,7 +386,7 @@ namespace AplikasiHotel
                 else if (nomorKamar >= 301 && nomorKamar <= 309)
                 {
                     int index = nomorKamar - 301;
-                    if (status3[index] == "terisi")
+                    if (string.Equals(status3[index], "terisi", StringComparison.Ordinal))
                     {
                         status3[index] = "tersedia";
                         MessageBox.Show("Check out berhasil untuk kamar nomor " + nomorKamar);
@@ -405,6 +406,7 @@ namespace AplikasiHotel
                 MessageBox.Show("Nomor kamar harus berupa angka");
             }
         }
+
 
         private void namaCheckOutTextBox_TextChanged(object sender, EventArgs e)
         {
