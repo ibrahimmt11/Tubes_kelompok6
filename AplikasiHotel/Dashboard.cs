@@ -125,6 +125,7 @@ namespace AplikasiHotel
             if (string.IsNullOrEmpty(namaTextBox.Text) || string.IsNullOrEmpty(emailTextBox.Text))
             {
                 MessageBox.Show("Nama dan Email harus diisi.");
+                isDataValid = false; // Tandai data tidak valid
                 return;
             }
 
@@ -132,6 +133,7 @@ namespace AplikasiHotel
             if (jenisComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Jenis kamar belum dipilih.");
+                isDataValid = false; // Tandai data tidak valid
                 return;
             }
 
@@ -140,6 +142,7 @@ namespace AplikasiHotel
             if (lamaMenginap == 0)
             {
                 MessageBox.Show("Hari belum dipilih.");
+                isDataValid = false; // Tandai data tidak valid
                 return;
             }
 
@@ -172,7 +175,6 @@ namespace AplikasiHotel
 
         private void pesanButton_Click(object sender, EventArgs e)
         {
-
             // Memeriksa validitas data
             if (!isDataValid)
             {
@@ -183,7 +185,7 @@ namespace AplikasiHotel
             // Memeriksa apakah nama dan email telah diisi
             if (string.IsNullOrEmpty(namaTextBox.Text) || string.IsNullOrEmpty(emailTextBox.Text))
             {
-                MessageBox.Show("Nama dan Email harus diisi.");
+                isDataValid = false; // Tandai data tidak valid
                 return;
             }
 
@@ -191,67 +193,59 @@ namespace AplikasiHotel
             int lamaMenginap = Convert.ToInt32(hariNumericUpDown.Value);
             if (lamaMenginap == 0)
             {
-                MessageBox.Show("Hari belum diinput.");
+                isDataValid = false; // Tandai data tidak valid
                 return;
             }
 
             // Mendapatkan tipe kamar yang dipilih
-            string selectedRoomType = jenisComboBox.SelectedItem.ToString();
+            string jenisKamar = jenisComboBox.SelectedItem.ToString();
             bool roomFound = false;
+            List<int> nomorKamar = null;
+            List<string> statusKamar = null;
+            int hargaKamar;
 
             // Memproses pemesanan berdasarkan tipe kamar yang dipilih
-            if (selectedRoomType == "Single")
+            switch (jenisKamar)
             {
-                // Pemesanan kamar tipe Single
-                for (int i = 0; i < jmlKmr1; i++)
-                {
-                    if (status1[i] == "tersedia")
-                    {
-                        status1[i] = "terisi";
-                        MessageBox.Show("Pesanan kamar Single dengan nomor " + noKmr1[i] + " berhasil.");
-                        roomFound = true;
-                        break;
-                    }
-                }
+                case "Single":
+                    nomorKamar = noKmr1;
+                    statusKamar = status1;
+                    hargaKamar = 750000;
+                    break;
+                case "Double":
+                    nomorKamar = noKmr2;
+                    statusKamar = status2;
+                    hargaKamar = 1000000;
+                    break;
+                case "Suite":
+                    nomorKamar = noKmr3;
+                    statusKamar = status3;
+                    hargaKamar = 1500000;
+                    break;
+                default:
+                    MessageBox.Show("Tipe kamar tidak valid.");
+                    isDataValid = false; // Tandai data tidak valid
+                    return;
             }
-            else if (selectedRoomType == "Double")
+
+            // Pemesanan kamar
+            for (int i = 0; i < nomorKamar.Count; i++)
             {
-                // Pemesanan kamar tipe Double
-                for (int i = 0; i < jmlKmr2; i++)
+                if (statusKamar[i] == "tersedia")
                 {
-                    if (status2[i] == "tersedia")
-                    {
-                        status2[i] = "terisi";
-                        MessageBox.Show("Pesanan kamar Double dengan nomor " + noKmr2[i] + " berhasil.");
-                        roomFound = true;
-                        break;
-                    }
+                    statusKamar[i] = "terisi";
+                    MessageBox.Show("Pesanan kamar " + jenisKamar + " dengan nomor " + nomorKamar[i] + " berhasil.");
+                    roomFound = true;
+                    break;
                 }
-            }
-            else if (selectedRoomType == "Suite")
-            {
-                // Pemesanan kamar tipe Suite
-                for (int i = 0; i < jmlKmr3; i++)
-                {
-                    if (status3[i] == "tersedia")
-                    {
-                        status3[i] = "terisi";
-                        MessageBox.Show("Pesanan kamar Suite dengan nomor " + noKmr3[i] + " berhasil.");
-                        roomFound = true;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Tipe kamar tidak valid.");
-                return;
             }
 
             // Memeriksa apakah kamar tersedia
             if (!roomFound)
             {
                 MessageBox.Show("Kamar sudah penuh.");
+                isDataValid = false; // Tandai data tidak valid
+                return;
             }
 
             // Mengosongkan pengisian
@@ -261,6 +255,7 @@ namespace AplikasiHotel
             jenisComboBox.SelectedIndex = -1;
             totalLabel.Text = string.Empty;
         }
+
 
 
         //FITUR CEK HARGA KAMAR (informasi Hotel)
