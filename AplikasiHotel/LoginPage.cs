@@ -8,14 +8,15 @@ namespace AplikasiHotel
 {
     public partial class LoginPage : Form
     {
-        private Config config;
-        private string path;
-        private string configFileName;
+        // Penamaan Underscore Prefix untuk variabel private
+        private Config _config;
+        private string _path;
+        private string _configFileName;
         public LoginPage()
         {
             InitializeComponent();
-            path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-            configFileName = "Login_config.json";
+            _path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            _configFileName = "Login_config.json";
 
             try
             {
@@ -28,12 +29,14 @@ namespace AplikasiHotel
             }
         }
 
+        // Penamaan Pascal Case untuk method 'ReadConfig'
         private void ReadConfig()
         {
-            string jsonFromFile = File.ReadAllText(Path.Combine(path, configFileName));
-            config = JsonSerializer.Deserialize<Config>(jsonFromFile);
+            string jsonFromFile = File.ReadAllText(Path.Combine(_path, _configFileName));
+            _config = JsonSerializer.Deserialize<Config>(jsonFromFile);
         }
 
+        // Penamaan Pascal Case untuk method 'WriteConfig'
         private void WriteConfig()
         {
             JsonSerializerOptions options = new JsonSerializerOptions()
@@ -41,13 +44,15 @@ namespace AplikasiHotel
                 WriteIndented = true
             };
 
-            string jsonString = JsonSerializer.Serialize(config, options);
-            string fullPath = Path.Combine(path, configFileName);
+            string jsonString = JsonSerializer.Serialize(_config, options);
+            string fullPath = Path.Combine(_path, _configFileName);
             File.WriteAllText(fullPath, jsonString);
         }
+
+        // Penamaan Pascal Case untuk method 'SetDefault'
         private void SetDefault()
         {
-            config = new Config("admin", "password123", "Login sukses", "Login gagal");
+            _config = new Config("admin", "password123", "Login sukses", "Login gagal");
         }
         public class Config
         {
@@ -94,8 +99,11 @@ namespace AplikasiHotel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            /* Trim() digunakan untuk menghapus spasi ekstra di awal dan akhir string 
+             * untuk membantu menghindari validasi yang tidak valid karena spasi tambahan.
+            */
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
@@ -103,7 +111,7 @@ namespace AplikasiHotel
                 return;
             }
 
-            if (config.Username == username && config.Password == password)
+            if (_config.Username == username && _config.Password == password)
             {
                 Dashboard ds = new Dashboard();
                 ds.Show();
@@ -111,7 +119,7 @@ namespace AplikasiHotel
             }
             else
             {
-                MessageBox.Show(config.Login_gagal);
+                MessageBox.Show(_config.Login_gagal);
             }
         }
 
