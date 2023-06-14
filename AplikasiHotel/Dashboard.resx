@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label16.Text" xml:space="preserve">
+    <value>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor convallis ipsum, ac cursus urna elementum nec. Aliquam venenatis, neque id ultrices vulputate, nunc leo tincidunt tellus, id ultricies elit enim at nisl. Nullam accumsan diam at lectus tincidunt bibendum. Suspendisse eu erat vel tortor ultricies feugiat. In finibus tincidunt mauris, nec facilisis tellus pulvinar ut. Ut eu leo at ipsum finibus efficitur vel a justo. Suspendisse ut eros non risus efficitur commodo nec vel dolor. Curabitur nec dui sed nisi suscipit tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Donec sed diam dapibus, consectetur ante ac, vehicula magna. Phasellus sit amet tincidunt tortor. Sed scelerisque velit a sem dapibus, sit amet varius mi consectetur."</value>
+  </data>
   <metadata name="Nama.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -132,7 +135,19 @@
   <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="label16.Text" xml:space="preserve">
-    <value>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor convallis ipsum, ac cursus urna elementum nec. Aliquam venenatis, neque id ultrices vulputate, nunc leo tincidunt tellus, id ultricies elit enim at nisl. Nullam accumsan diam at lectus tincidunt bibendum. Suspendisse eu erat vel tortor ultricies feugiat. In finibus tincidunt mauris, nec facilisis tellus pulvinar ut. Ut eu leo at ipsum finibus efficitur vel a justo. Suspendisse ut eros non risus efficitur commodo nec vel dolor. Curabitur nec dui sed nisi suscipit tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Donec sed diam dapibus, consectetur ante ac, vehicula magna. Phasellus sit amet tincidunt tortor. Sed scelerisque velit a sem dapibus, sit amet varius mi consectetur."</value>
-  </data>
+  <metadata name="Nama.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

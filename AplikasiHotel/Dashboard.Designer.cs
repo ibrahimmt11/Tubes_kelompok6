@@ -97,6 +97,8 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabAryaHotel.SuspendLayout();
             this.informasiTab.SuspendLayout();
             this.pesanKmrTab.SuspendLayout();
@@ -736,6 +738,8 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.label19);
             this.panel4.Controls.Add(this.comboBoxJasa);
             this.panel4.Controls.Add(this.BtnPesanJasa);
             this.panel4.Controls.Add(this.listBoxJasa);
@@ -759,7 +763,7 @@
             // 
             // BtnPesanJasa
             // 
-            this.BtnPesanJasa.Location = new System.Drawing.Point(236, 123);
+            this.BtnPesanJasa.Location = new System.Drawing.Point(289, 131);
             this.BtnPesanJasa.Name = "BtnPesanJasa";
             this.BtnPesanJasa.Size = new System.Drawing.Size(98, 24);
             this.BtnPesanJasa.TabIndex = 1;
@@ -774,7 +778,7 @@
             "1. Sarapan",
             "2. Makan malam",
             "3. Pembersihan kamar"});
-            this.comboBoxJasa.Location = new System.Drawing.Point(236, 73);
+            this.comboBoxJasa.Location = new System.Drawing.Point(289, 81);
             this.comboBoxJasa.Name = "comboBoxJasa";
             this.comboBoxJasa.Size = new System.Drawing.Size(98, 24);
             this.comboBoxJasa.TabIndex = 2;
@@ -859,6 +863,24 @@
             this.Column2.Name = "Column2";
             this.Column2.Width = 50;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(36, 29);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(157, 16);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Pelayanan yang tersedia";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(287, 51);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(100, 16);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Pilih Pelayanan";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -895,6 +917,7 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -973,5 +996,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label19;
     }
 }
