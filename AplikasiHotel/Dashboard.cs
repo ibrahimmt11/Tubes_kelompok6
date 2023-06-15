@@ -665,5 +665,25 @@ namespace AplikasiHotel
         {
 
         }
+
+        private void informasiTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pesanKmrTab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
