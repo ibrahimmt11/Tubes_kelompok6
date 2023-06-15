@@ -356,50 +356,49 @@ namespace AplikasiHotel
             this.Hide();
         }
         //CheckOut
-        private void checkOutButton_Click(object sender, EventArgs e)
-        {
-            string namaPemesan = namaCheckOutTextBox.Text.Trim();
+        private void checkOutButton_Click(object sender, EventArgs e) { 
+            string namaPemesan = namaCheckOutTextBox.Text;
             int nomorKamar;
 
             if (int.TryParse(noKamarCheckOutTextBox.Text, out nomorKamar))
             {
-                if (nomorKamar >= 101 && nomorKamar <= 109)
+                if (IsSingleRoomNumber(nomorKamar))
                 {
                     int index = nomorKamar - 101;
-                    if (string.Equals(status1[index], "terisi", StringComparison.Ordinal))
+                    if (status1[index] == "terisi")
                     {
                         status1[index] = "tersedia";
-                        MessageBox.Show("Check out berhasil untuk kamar nomor " + nomorKamar);
+                        MessageBox.Show($"Check out berhasil untuk kamar nomor {nomorKamar}");
                     }
                     else
                     {
-                        MessageBox.Show("Kamar dengan nomor " + nomorKamar + " belum dipesan");
+                        MessageBox.Show($"Kamar dengan nomor {nomorKamar} belum dipesan");
                     }
                 }
-                else if (nomorKamar >= 201 && nomorKamar <= 209)
+                else if (IsDoubleRoomNumber(nomorKamar))
                 {
                     int index = nomorKamar - 201;
-                    if (string.Equals(status2[index], "terisi", StringComparison.Ordinal))
+                    if (status2[index] == "terisi")
                     {
                         status2[index] = "tersedia";
-                        MessageBox.Show("Check out berhasil untuk kamar nomor " + nomorKamar);
+                        MessageBox.Show($"Check out berhasil untuk kamar nomor {nomorKamar}");
                     }
                     else
                     {
-                        MessageBox.Show("Kamar dengan nomor " + nomorKamar + " belum dipesan");
+                        MessageBox.Show($"Kamar dengan nomor {nomorKamar} belum dipesan");
                     }
                 }
-                else if (nomorKamar >= 301 && nomorKamar <= 309)
+                else if (IsSuiteRoomNumber(nomorKamar))
                 {
                     int index = nomorKamar - 301;
-                    if (string.Equals(status3[index], "terisi", StringComparison.Ordinal))
+                    if (status3[index] == "terisi")
                     {
                         status3[index] = "tersedia";
-                        MessageBox.Show("Check out berhasil untuk kamar nomor " + nomorKamar);
+                        MessageBox.Show($"Check out berhasil untuk kamar nomor {nomorKamar}");
                     }
                     else
                     {
-                        MessageBox.Show("Kamar dengan nomor " + nomorKamar + " belum dipesan");
+                        MessageBox.Show($"Kamar dengan nomor {nomorKamar} belum dipesan");
                     }
                 }
                 else
@@ -411,6 +410,21 @@ namespace AplikasiHotel
             {
                 MessageBox.Show("Nomor kamar harus berupa angka");
             }
+        }
+
+        private bool IsSingleRoomNumber(int nomorKamar)
+        {
+            return nomorKamar >= 101 && nomorKamar <= 109;
+        }
+
+        private bool IsDoubleRoomNumber(int nomorKamar)
+        {
+            return nomorKamar >= 201 && nomorKamar <= 209;
+        }
+
+        private bool IsSuiteRoomNumber(int nomorKamar)
+        {
+            return nomorKamar >= 301 && nomorKamar <= 309;
         }
 
 
