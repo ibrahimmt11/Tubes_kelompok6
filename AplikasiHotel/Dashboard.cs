@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Aplikasi_Hotel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -142,8 +141,38 @@ namespace AplikasiHotel
 
         }
 
-        private bool isDataValid = false; // Flag untuk menandakan validitas data
+        // Dictionary untuk memetakan jenis kamar ke harga per malam
+        Dictionary<string, int>  jenisKamar = new Dictionary<string, int>()
+        {
+            { "Single", 750000 },
+            { "Double", 1000000 },
+            { "Suite", 1500000 }
+        };
 
+
+        // Method untuk memperbarui total jumlah yang harus dibayarkan
+        private void UpdateTotalAmount()
+        {
+            int hargaPerMalam = 0;
+            int totalAmount = 0;
+            int lamaMenginap = Convert.ToInt32(hariNumericUpDown.Value);
+            string selectedJenis = jenisComboBox.SelectedItem.ToString();
+
+            if (jenisKamar.ContainsKey(selectedJenis))
+            {
+                hargaPerMalam = jenisKamar[selectedJenis];
+                totalAmount = hargaPerMalam * lamaMenginap;
+            }
+            else
+            {
+                hargaPerMalam = 0;
+                totalAmount = 0;
+            }
+
+            totalLabel.Text = totalAmount.ToString();
+        }
+
+        private bool isDataValid = false; // Flag untuk menandakan validitas data
         private void nextButton_Click(object sender, EventArgs e)
         {
             // Memeriksa apakah nama dan email telah diisi
@@ -179,25 +208,8 @@ namespace AplikasiHotel
                 return;
             }
 
-            // Menentukan harga per malam berdasarkan jenis kamar
-            int hargaPerMalam = 0;
-            if (jenisComboBox.SelectedItem.Equals("Single"))
-            {
-                hargaPerMalam = 750000;
-            }
-            else if (jenisComboBox.SelectedItem.Equals("Double"))
-            {
-                hargaPerMalam = 1000000;
-            }
-            else if (jenisComboBox.SelectedItem.Equals("Suite"))
-            {
-                hargaPerMalam = 1500000;
-            }
-
-            // Menghitung total jumlah yang harus dibayarkan
-            int totalAmount = hargaPerMalam * lamaMenginap;
-            totalLabel.Text = totalAmount.ToString();
-
+            UpdateTotalAmount(); // memanggil fungsi UpdateReviewLabel untuk ditampilkan di label
+           
             isDataValid = true; // Set flag menjadi true jika semua kondisi terpenuhi
         }
 
@@ -232,30 +244,27 @@ namespace AplikasiHotel
                 return;
             }
 
-            // Mendapatkan tipe kamar yang dipilih
-            string jenisKamar = jenisComboBox.SelectedItem.ToString();
+            UpdateTotalAmount();
+
+            string selectedJenis = jenisComboBox.SelectedItem.ToString();
             bool roomFound = false;
             List<int> nomorKamar = null;
             List<string> statusKamar = null;
-            int hargaKamar;
 
             // Memproses pemesanan berdasarkan tipe kamar yang dipilih
-            switch (jenisKamar)
+            switch (selectedJenis)
             {
                 case "Single":
                     nomorKamar = noKmr1;
                     statusKamar = status1;
-                    hargaKamar = 750000;
                     break;
                 case "Double":
                     nomorKamar = noKmr2;
                     statusKamar = status2;
-                    hargaKamar = 1000000;
                     break;
                 case "Suite":
                     nomorKamar = noKmr3;
                     statusKamar = status3;
-                    hargaKamar = 1500000;
                     break;
                 default:
                     MessageBox.Show("Tipe kamar tidak valid.");
@@ -269,8 +278,9 @@ namespace AplikasiHotel
                 if (statusKamar[i] == "tersedia")
                 {
                     statusKamar[i] = "terisi";
-                    MessageBox.Show("Pesanan kamar " + jenisKamar + " dengan nomor " + nomorKamar[i] + " berhasil.");
+                    MessageBox.Show("Pesanan kamar " + selectedJenis + " dengan nomor " + nomorKamar[i] + " berhasil.");
                     roomFound = true;
+                    SavePesananData(); // Panggil fungsi untuk menyimpan data pesanan
                     break;
                 }
             }
@@ -283,16 +293,15 @@ namespace AplikasiHotel
                 return;
             }
 
-            // Mengosongkan pengisian RIDWAN (gw gini in biar method riwayat gw bisa jalan)
-            /*namaTextBox.Text = string.Empty;
+            // Menandai data valid setelah pemesanan sukses
+            isDataValid = true;
+
+            // Mengosongkan pengisian
+            namaTextBox.Text = string.Empty;
             emailTextBox.Text = string.Empty;
+            jenisComboBox.SelectedItem = null;
             hariNumericUpDown.Value = 0;
-            jenisComboBox.SelectedIndex = -1;
-            totalLabel.Text = string.Empty;
-            */
         }
-
-
 
         //FITUR CEK HARGA KAMAR (informasi Hotel)
         private void btnCek_Click(object sender, EventArgs e)
@@ -499,8 +508,7 @@ namespace AplikasiHotel
             }
         }
 
-        // FITUR RIWAYAT RESERVASI
-        private void btnRiwayat_Click(object sender, EventArgs e)
+        private void SavePesananData()
         {
             // Memeriksa apakah nama dan email telah diisi(secure code)
             if (string.IsNullOrEmpty(namaTextBox.Text) || string.IsNullOrEmpty(emailTextBox.Text))
@@ -533,10 +541,17 @@ namespace AplikasiHotel
                 daftarPesanan.Add(pesananBaru);
 
                 // Menambahkan data pemesanan ke dataGridView1
-                dataGridView1.Rows.Add(pesananBaru.Nama, pesananBaru.Email, pesananBaru.JenisKamar, 
+                dataGridView1.Rows.Add(pesananBaru.Nama, pesananBaru.Email, pesananBaru.JenisKamar,
                     pesananBaru.TotalAmount, pesananBaru.LamaMenginap);
             }
         }
+
+        // FITUR RIWAYAT RESERVASI
+        private void btnRiwayat_Click(object sender, EventArgs e)
+        {
+            SavePesananData();
+        }
+
 
         // Method untuk mengecek apakah data reservasi sudah masuk datagrid atau belum 
         // untuk mencegah duplikasi (secure code)
