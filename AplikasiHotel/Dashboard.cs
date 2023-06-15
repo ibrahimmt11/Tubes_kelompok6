@@ -661,5 +661,9 @@ namespace AplikasiHotel
 
         }
 
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

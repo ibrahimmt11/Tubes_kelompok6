@@ -1035,6 +1035,7 @@
             this.tabPage6.TabIndex = 8;
             this.tabPage6.Text = "Lihat Ulasan";
             this.tabPage6.UseVisualStyleBackColor = true;
+            this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
             // reviewLabel
             // 
@@ -1043,8 +1044,9 @@
             this.reviewLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reviewLabel.Location = new System.Drawing.Point(3, 3);
             this.reviewLabel.Name = "reviewLabel";
-            this.reviewLabel.Size = new System.Drawing.Size(0, 13);
+            this.reviewLabel.Size = new System.Drawing.Size(94, 13);
             this.reviewLabel.TabIndex = 0;
+            this.reviewLabel.Text = "Belum Ada Ulasan";
             this.reviewLabel.Click += new System.EventHandler(this.reviewLabel_Click);
             // 
             // Dashboard
