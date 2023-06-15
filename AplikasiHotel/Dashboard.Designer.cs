@@ -77,28 +77,39 @@
             this.label22 = new System.Windows.Forms.Label();
             this.inputmakanan = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBoxJasa = new System.Windows.Forms.ComboBox();
+            this.BtnPesanJasa = new System.Windows.Forms.Button();
+            this.listBoxJasa = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnRiwayat = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.checkOutButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.noKamarCheckOutTextBox = new System.Windows.Forms.TextBox();
             this.namaCheckOutTextBox = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.listBoxJasa = new System.Windows.Forms.ListBox();
-            this.BtnPesanJasa = new System.Windows.Forms.Button();
-            this.comboBoxJasa = new System.Windows.Forms.ComboBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnRiwayat = new System.Windows.Forms.Button();
-            this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.SubmitReviewButton = new System.Windows.Forms.Button();
+            this.commentTextBox = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.ratingTextBox = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.roomNumberTextBox = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.reviewLabel = new System.Windows.Forms.Label();
             this.tabAryaHotel.SuspendLayout();
             this.informasiTab.SuspendLayout();
             this.pesanKmrTab.SuspendLayout();
@@ -109,29 +120,32 @@
             this.panel3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(72, 51);
+            this.label9.Location = new System.Drawing.Point(54, 41);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 21);
+            this.label9.Size = new System.Drawing.Size(107, 17);
             this.label9.TabIndex = 44;
             this.label9.Text = "Welcome, Baim";
             // 
             // logOutButton
             // 
-            this.logOutButton.Location = new System.Drawing.Point(1054, 38);
-            this.logOutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logOutButton.Location = new System.Drawing.Point(790, 31);
+            this.logOutButton.Margin = new System.Windows.Forms.Padding(2);
             this.logOutButton.Name = "logOutButton";
-            this.logOutButton.Size = new System.Drawing.Size(105, 31);
+            this.logOutButton.Size = new System.Drawing.Size(79, 25);
             this.logOutButton.TabIndex = 43;
             this.logOutButton.Text = "LogOut";
             this.logOutButton.UseVisualStyleBackColor = true;
@@ -140,11 +154,11 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(453, 33);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(340, 27);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(352, 36);
+            this.textBox1.Size = new System.Drawing.Size(265, 30);
             this.textBox1.TabIndex = 42;
             this.textBox1.Text = "ARYA HOTEL";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -158,11 +172,13 @@
             this.tabAryaHotel.Controls.Add(this.tabPage2);
             this.tabAryaHotel.Controls.Add(this.tabPage3);
             this.tabAryaHotel.Controls.Add(this.tabPage4);
-            this.tabAryaHotel.Location = new System.Drawing.Point(171, 110);
-            this.tabAryaHotel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabAryaHotel.Controls.Add(this.tabPage5);
+            this.tabAryaHotel.Controls.Add(this.tabPage6);
+            this.tabAryaHotel.Location = new System.Drawing.Point(128, 89);
+            this.tabAryaHotel.Margin = new System.Windows.Forms.Padding(2);
             this.tabAryaHotel.Name = "tabAryaHotel";
             this.tabAryaHotel.SelectedIndex = 0;
-            this.tabAryaHotel.Size = new System.Drawing.Size(912, 438);
+            this.tabAryaHotel.Size = new System.Drawing.Size(684, 356);
             this.tabAryaHotel.TabIndex = 45;
             // 
             // informasiTab
@@ -175,11 +191,11 @@
             this.informasiTab.Controls.Add(this.label17);
             this.informasiTab.Controls.Add(this.label16);
             this.informasiTab.Controls.Add(this.label15);
-            this.informasiTab.Location = new System.Drawing.Point(4, 25);
-            this.informasiTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.informasiTab.Location = new System.Drawing.Point(4, 22);
+            this.informasiTab.Margin = new System.Windows.Forms.Padding(2);
             this.informasiTab.Name = "informasiTab";
-            this.informasiTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.informasiTab.Size = new System.Drawing.Size(904, 409);
+            this.informasiTab.Padding = new System.Windows.Forms.Padding(2);
+            this.informasiTab.Size = new System.Drawing.Size(676, 330);
             this.informasiTab.TabIndex = 1;
             this.informasiTab.Text = "Informasi Hotel";
             this.informasiTab.UseVisualStyleBackColor = true;
@@ -191,18 +207,20 @@
             "Single",
             "Double",
             "Suite"});
-            this.comboBoxJenisKamar.Location = new System.Drawing.Point(328, 291);
+            this.comboBoxJenisKamar.Location = new System.Drawing.Point(246, 236);
+            this.comboBoxJenisKamar.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxJenisKamar.Name = "comboBoxJenisKamar";
-            this.comboBoxJenisKamar.Size = new System.Drawing.Size(140, 24);
+            this.comboBoxJenisKamar.Size = new System.Drawing.Size(106, 21);
             this.comboBoxJenisKamar.TabIndex = 53;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.Color.DarkGray;
-            this.label20.Location = new System.Drawing.Point(533, 265);
+            this.label20.Location = new System.Drawing.Point(400, 215);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 16);
+            this.label20.Size = new System.Drawing.Size(39, 13);
             this.label20.TabIndex = 52;
             this.label20.Text = "Harga:";
             // 
@@ -210,27 +228,29 @@
             // 
             this.labelInformasiHarga.BackColor = System.Drawing.Color.White;
             this.labelInformasiHarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelInformasiHarga.Location = new System.Drawing.Point(533, 283);
+            this.labelInformasiHarga.Location = new System.Drawing.Point(400, 230);
+            this.labelInformasiHarga.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelInformasiHarga.Name = "labelInformasiHarga";
-            this.labelInformasiHarga.Size = new System.Drawing.Size(107, 33);
+            this.labelInformasiHarga.Size = new System.Drawing.Size(80, 27);
             this.labelInformasiHarga.TabIndex = 51;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.DarkGray;
-            this.label18.Location = new System.Drawing.Point(324, 265);
+            this.label18.Location = new System.Drawing.Point(243, 215);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(144, 16);
+            this.label18.Size = new System.Drawing.Size(116, 13);
             this.label18.TabIndex = 50;
             this.label18.Text = "Masukkan jenis kamar:";
             // 
             // btnCek
             // 
-            this.btnCek.Location = new System.Drawing.Point(327, 330);
-            this.btnCek.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCek.Location = new System.Drawing.Point(245, 268);
+            this.btnCek.Margin = new System.Windows.Forms.Padding(2);
             this.btnCek.Name = "btnCek";
-            this.btnCek.Size = new System.Drawing.Size(68, 29);
+            this.btnCek.Size = new System.Drawing.Size(51, 24);
             this.btnCek.TabIndex = 49;
             this.btnCek.Text = "Cek";
             this.btnCek.UseVisualStyleBackColor = true;
@@ -239,17 +259,19 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(324, 242);
+            this.label17.Location = new System.Drawing.Point(243, 197);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(72, 16);
+            this.label17.Size = new System.Drawing.Size(58, 13);
             this.label17.TabIndex = 47;
             this.label17.Text = "Cek Harga";
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(324, 59);
+            this.label16.Location = new System.Drawing.Point(243, 48);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(558, 182);
+            this.label16.Size = new System.Drawing.Size(418, 148);
             this.label16.TabIndex = 46;
             this.label16.Text = resources.GetString("label16.Text");
             // 
@@ -257,9 +279,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(324, 32);
+            this.label15.Location = new System.Drawing.Point(243, 26);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 21);
+            this.label15.Size = new System.Drawing.Size(89, 17);
             this.label15.TabIndex = 45;
             this.label15.Text = "Arya Hotel";
             // 
@@ -275,11 +298,11 @@
             this.pesanKmrTab.Controls.Add(this.label1);
             this.pesanKmrTab.Controls.Add(this.namaTextBox);
             this.pesanKmrTab.Controls.Add(this.panel1);
-            this.pesanKmrTab.Location = new System.Drawing.Point(4, 25);
-            this.pesanKmrTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pesanKmrTab.Location = new System.Drawing.Point(4, 22);
+            this.pesanKmrTab.Margin = new System.Windows.Forms.Padding(2);
             this.pesanKmrTab.Name = "pesanKmrTab";
-            this.pesanKmrTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pesanKmrTab.Size = new System.Drawing.Size(904, 409);
+            this.pesanKmrTab.Padding = new System.Windows.Forms.Padding(2);
+            this.pesanKmrTab.Size = new System.Drawing.Size(676, 330);
             this.pesanKmrTab.TabIndex = 0;
             this.pesanKmrTab.Text = "Pesan Kamar";
             this.pesanKmrTab.UseVisualStyleBackColor = true;
@@ -287,9 +310,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(453, 174);
+            this.label3.Location = new System.Drawing.Point(340, 141);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 16);
+            this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 28;
             this.label3.Text = "Lama menginap";
             // 
@@ -300,36 +324,38 @@
             "Single",
             "Double",
             "Suite"});
-            this.jenisComboBox.Location = new System.Drawing.Point(455, 113);
-            this.jenisComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.jenisComboBox.Location = new System.Drawing.Point(341, 92);
+            this.jenisComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.jenisComboBox.Name = "jenisComboBox";
-            this.jenisComboBox.Size = new System.Drawing.Size(149, 24);
+            this.jenisComboBox.Size = new System.Drawing.Size(113, 21);
             this.jenisComboBox.TabIndex = 38;
             this.jenisComboBox.SelectedIndexChanged += new System.EventHandler(this.jenisComboBox_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(569, 194);
+            this.label5.Location = new System.Drawing.Point(427, 158);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 16);
+            this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 30;
             this.label5.Text = "/hari";
             // 
             // hariNumericUpDown
             // 
-            this.hariNumericUpDown.Location = new System.Drawing.Point(457, 192);
-            this.hariNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.hariNumericUpDown.Location = new System.Drawing.Point(343, 156);
+            this.hariNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.hariNumericUpDown.Name = "hariNumericUpDown";
-            this.hariNumericUpDown.Size = new System.Drawing.Size(107, 22);
+            this.hariNumericUpDown.Size = new System.Drawing.Size(80, 20);
             this.hariNumericUpDown.TabIndex = 34;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(452, 92);
+            this.label6.Location = new System.Drawing.Point(339, 75);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 16);
+            this.label6.Size = new System.Drawing.Size(64, 13);
             this.label6.TabIndex = 31;
             this.label6.Text = "Jenis Kamar";
             // 
@@ -342,35 +368,37 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.nextButton);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(410, 42);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(308, 34);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(396, 329);
+            this.panel2.Size = new System.Drawing.Size(297, 267);
             this.panel2.TabIndex = 26;
             // 
             // totalLabel
             // 
             this.totalLabel.BackColor = System.Drawing.Color.White;
-            this.totalLabel.Location = new System.Drawing.Point(219, 218);
+            this.totalLabel.Location = new System.Drawing.Point(164, 177);
+            this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(120, 31);
+            this.totalLabel.Size = new System.Drawing.Size(90, 25);
             this.totalLabel.TabIndex = 46;
             this.totalLabel.Click += new System.EventHandler(this.totalLabel_Click);
             // 
             // labelTotalHarga
             // 
             this.labelTotalHarga.AutoSize = true;
-            this.labelTotalHarga.Location = new System.Drawing.Point(226, 218);
+            this.labelTotalHarga.Location = new System.Drawing.Point(170, 177);
+            this.labelTotalHarga.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTotalHarga.Name = "labelTotalHarga";
-            this.labelTotalHarga.Size = new System.Drawing.Size(0, 16);
+            this.labelTotalHarga.Size = new System.Drawing.Size(0, 13);
             this.labelTotalHarga.TabIndex = 45;
             // 
             // pesanButton
             // 
-            this.pesanButton.Location = new System.Drawing.Point(263, 292);
-            this.pesanButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pesanButton.Location = new System.Drawing.Point(197, 237);
+            this.pesanButton.Margin = new System.Windows.Forms.Padding(2);
             this.pesanButton.Name = "pesanButton";
-            this.pesanButton.Size = new System.Drawing.Size(76, 27);
+            this.pesanButton.Size = new System.Drawing.Size(57, 22);
             this.pesanButton.TabIndex = 44;
             this.pesanButton.Text = "Pesan";
             this.pesanButton.UseVisualStyleBackColor = true;
@@ -379,27 +407,29 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(195, 218);
+            this.label23.Location = new System.Drawing.Point(146, 177);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(25, 16);
+            this.label23.Size = new System.Drawing.Size(21, 13);
             this.label23.TabIndex = 43;
             this.label23.Text = "Rp";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(14, 10);
+            this.label11.Location = new System.Drawing.Point(10, 8);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 16);
+            this.label11.Size = new System.Drawing.Size(54, 13);
             this.label11.TabIndex = 42;
             this.label11.Text = "Reservasi";
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(262, 262);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nextButton.Location = new System.Drawing.Point(196, 213);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(76, 27);
+            this.nextButton.Size = new System.Drawing.Size(57, 22);
             this.nextButton.TabIndex = 37;
             this.nextButton.Text = "Check";
             this.nextButton.UseVisualStyleBackColor = true;
@@ -408,77 +438,81 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(190, 201);
+            this.label7.Location = new System.Drawing.Point(142, 163);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 16);
+            this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 35;
             this.label7.Text = "Total";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(138, 174);
+            this.label2.Location = new System.Drawing.Point(104, 141);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 27;
             this.label2.Text = "Email";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 94);
+            this.label1.Location = new System.Drawing.Point(104, 76);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 24;
             this.label1.Text = "Nama";
             // 
             // namaTextBox
             // 
             this.namaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.namaTextBox.Location = new System.Drawing.Point(141, 113);
-            this.namaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.namaTextBox.Location = new System.Drawing.Point(106, 92);
+            this.namaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.namaTextBox.Multiline = true;
             this.namaTextBox.Name = "namaTextBox";
-            this.namaTextBox.Size = new System.Drawing.Size(218, 38);
+            this.namaTextBox.Size = new System.Drawing.Size(164, 31);
             this.namaTextBox.TabIndex = 23;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.emailTextBox);
-            this.panel1.Location = new System.Drawing.Point(100, 42);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(75, 34);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(305, 329);
+            this.panel1.Size = new System.Drawing.Size(229, 267);
             this.panel1.TabIndex = 25;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 10);
+            this.label10.Location = new System.Drawing.Point(15, 8);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 16);
+            this.label10.Size = new System.Drawing.Size(48, 13);
             this.label10.TabIndex = 41;
             this.label10.Text = "Data Diri";
             // 
             // emailTextBox
             // 
             this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.emailTextBox.Location = new System.Drawing.Point(42, 150);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emailTextBox.Location = new System.Drawing.Point(32, 122);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.emailTextBox.Multiline = true;
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(218, 38);
+            this.emailTextBox.Size = new System.Drawing.Size(164, 31);
             this.emailTextBox.TabIndex = 33;
             // 
             // cekKmrTab
             // 
             this.cekKmrTab.Controls.Add(this.panel3);
-            this.cekKmrTab.Location = new System.Drawing.Point(4, 25);
-            this.cekKmrTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cekKmrTab.Location = new System.Drawing.Point(4, 22);
+            this.cekKmrTab.Margin = new System.Windows.Forms.Padding(2);
             this.cekKmrTab.Name = "cekKmrTab";
-            this.cekKmrTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cekKmrTab.Size = new System.Drawing.Size(904, 409);
+            this.cekKmrTab.Padding = new System.Windows.Forms.Padding(2);
+            this.cekKmrTab.Size = new System.Drawing.Size(676, 330);
             this.cekKmrTab.TabIndex = 2;
             this.cekKmrTab.Text = "Cek Kamar";
             this.cekKmrTab.UseVisualStyleBackColor = true;
@@ -491,20 +525,20 @@
             this.panel3.Controls.Add(this.cekKmrButton);
             this.panel3.Controls.Add(this.listBox1);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(256, 72);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(192, 58);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(429, 261);
+            this.panel3.Size = new System.Drawing.Size(322, 212);
             this.panel3.TabIndex = 2;
             // 
             // statusKmrLabel
             // 
             this.statusKmrLabel.BackColor = System.Drawing.SystemColors.Window;
             this.statusKmrLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.statusKmrLabel.Location = new System.Drawing.Point(206, 138);
-            this.statusKmrLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.statusKmrLabel.Location = new System.Drawing.Point(154, 112);
+            this.statusKmrLabel.Margin = new System.Windows.Forms.Padding(2);
             this.statusKmrLabel.Name = "statusKmrLabel";
-            this.statusKmrLabel.Size = new System.Drawing.Size(140, 31);
+            this.statusKmrLabel.Size = new System.Drawing.Size(105, 25);
             this.statusKmrLabel.TabIndex = 6;
             this.statusKmrLabel.Text = "Status";
             this.statusKmrLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -513,29 +547,30 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(186, 74);
+            this.label13.Location = new System.Drawing.Point(140, 60);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 16);
+            this.label13.Size = new System.Drawing.Size(61, 13);
             this.label13.TabIndex = 5;
             this.label13.Text = "Cek kamar ";
             // 
             // cekKmrTextBox
             // 
             this.cekKmrTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cekKmrTextBox.Location = new System.Drawing.Point(206, 102);
-            this.cekKmrTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cekKmrTextBox.Location = new System.Drawing.Point(154, 83);
+            this.cekKmrTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cekKmrTextBox.Multiline = true;
             this.cekKmrTextBox.Name = "cekKmrTextBox";
-            this.cekKmrTextBox.Size = new System.Drawing.Size(140, 31);
+            this.cekKmrTextBox.Size = new System.Drawing.Size(105, 25);
             this.cekKmrTextBox.TabIndex = 4;
             this.cekKmrTextBox.TextChanged += new System.EventHandler(this.cekKmrTextBox_TextChanged);
             // 
             // cekKmrButton
             // 
-            this.cekKmrButton.Location = new System.Drawing.Point(234, 174);
-            this.cekKmrButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cekKmrButton.Location = new System.Drawing.Point(176, 141);
+            this.cekKmrButton.Margin = new System.Windows.Forms.Padding(2);
             this.cekKmrButton.Name = "cekKmrButton";
-            this.cekKmrButton.Size = new System.Drawing.Size(91, 25);
+            this.cekKmrButton.Size = new System.Drawing.Size(68, 20);
             this.cekKmrButton.TabIndex = 3;
             this.cekKmrButton.Text = "Cek";
             this.cekKmrButton.UseVisualStyleBackColor = true;
@@ -544,7 +579,6 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
             this.listBox1.Items.AddRange(new object[] {
             "Kamar 101",
             "Kamar 102",
@@ -575,18 +609,19 @@
             "Kamar 309",
             "",
             ""});
-            this.listBox1.Location = new System.Drawing.Point(45, 57);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBox1.Location = new System.Drawing.Point(34, 46);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(112, 180);
+            this.listBox1.Size = new System.Drawing.Size(85, 147);
             this.listBox1.TabIndex = 0;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(33, 26);
+            this.label12.Location = new System.Drawing.Point(25, 21);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(131, 16);
+            this.label12.Size = new System.Drawing.Size(103, 13);
             this.label12.TabIndex = 1;
             this.label12.Text = "Kamar yang tersedia";
             // 
@@ -597,11 +632,11 @@
             this.tabPage1.Controls.Add(this.btnPesan);
             this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.inputmakanan);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(904, 409);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(676, 330);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Pesan Makan";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -610,27 +645,30 @@
             // statusPemesanan
             // 
             this.statusPemesanan.AutoSize = true;
-            this.statusPemesanan.Location = new System.Drawing.Point(490, 335);
+            this.statusPemesanan.Location = new System.Drawing.Point(368, 272);
+            this.statusPemesanan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.statusPemesanan.Name = "statusPemesanan";
-            this.statusPemesanan.Size = new System.Drawing.Size(0, 16);
+            this.statusPemesanan.Size = new System.Drawing.Size(0, 13);
             this.statusPemesanan.TabIndex = 8;
             this.statusPemesanan.Click += new System.EventHandler(this.Pemesanan_Click);
             // 
             // DisplayMenuOptions
             // 
             this.DisplayMenuOptions.AutoSize = true;
-            this.DisplayMenuOptions.Location = new System.Drawing.Point(244, 154);
+            this.DisplayMenuOptions.Location = new System.Drawing.Point(183, 125);
+            this.DisplayMenuOptions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DisplayMenuOptions.Name = "DisplayMenuOptions";
-            this.DisplayMenuOptions.Size = new System.Drawing.Size(121, 96);
+            this.DisplayMenuOptions.Size = new System.Drawing.Size(99, 78);
             this.DisplayMenuOptions.TabIndex = 7;
             this.DisplayMenuOptions.Text = "MENU TERSEDIA:\r\n\r\n1.Nasi Goreng\r\n2.Mie Goreng\r\n3.Ayam Bakar\r\n4.Sate Ayam";
             this.DisplayMenuOptions.Click += new System.EventHandler(this.label21_Click);
             // 
             // btnPesan
             // 
-            this.btnPesan.Location = new System.Drawing.Point(515, 232);
+            this.btnPesan.Location = new System.Drawing.Point(386, 188);
+            this.btnPesan.Margin = new System.Windows.Forms.Padding(2);
             this.btnPesan.Name = "btnPesan";
-            this.btnPesan.Size = new System.Drawing.Size(150, 49);
+            this.btnPesan.Size = new System.Drawing.Size(112, 40);
             this.btnPesan.TabIndex = 6;
             this.btnPesan.Text = "Pesan";
             this.btnPesan.UseVisualStyleBackColor = true;
@@ -639,102 +677,32 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(365, 335);
+            this.label22.Location = new System.Drawing.Point(274, 272);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(0, 16);
+            this.label22.Size = new System.Drawing.Size(0, 13);
             this.label22.TabIndex = 5;
             // 
             // inputmakanan
             // 
-            this.inputmakanan.Location = new System.Drawing.Point(515, 135);
+            this.inputmakanan.Location = new System.Drawing.Point(386, 110);
+            this.inputmakanan.Margin = new System.Windows.Forms.Padding(2);
             this.inputmakanan.Name = "inputmakanan";
-            this.inputmakanan.Size = new System.Drawing.Size(150, 22);
+            this.inputmakanan.Size = new System.Drawing.Size(114, 20);
             this.inputmakanan.TabIndex = 4;
             this.inputmakanan.TextChanged += new System.EventHandler(this.inputmakanan_TextChanged);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(904, 409);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(676, 330);
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Pelayanan";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.panel5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(904, 409);
-            this.tabPage3.TabIndex = 5;
-            this.tabPage3.Text = "Riwayat Reservasi";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.checkOutButton);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Controls.Add(this.noKamarCheckOutTextBox);
-            this.tabPage4.Controls.Add(this.namaCheckOutTextBox);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Size = new System.Drawing.Size(904, 409);
-            this.tabPage4.TabIndex = 6;
-            this.tabPage4.Text = "CheckOut";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // checkOutButton
-            // 
-            this.checkOutButton.Location = new System.Drawing.Point(339, 241);
-            this.checkOutButton.Name = "checkOutButton";
-            this.checkOutButton.Size = new System.Drawing.Size(200, 52);
-            this.checkOutButton.TabIndex = 4;
-            this.checkOutButton.Text = "CheckOut";
-            this.checkOutButton.UseVisualStyleBackColor = true;
-            this.checkOutButton.Click += new System.EventHandler(this.checkOutButton_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(553, 111);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 16);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "No Kamar";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(172, 111);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Nama";
-            // 
-            // noKamarCheckOutTextBox
-            // 
-            this.noKamarCheckOutTextBox.Location = new System.Drawing.Point(556, 130);
-            this.noKamarCheckOutTextBox.Name = "noKamarCheckOutTextBox";
-            this.noKamarCheckOutTextBox.Size = new System.Drawing.Size(158, 22);
-            this.noKamarCheckOutTextBox.TabIndex = 1;
-            this.noKamarCheckOutTextBox.TextChanged += new System.EventHandler(this.noKamarCheckOutTextBox_TextChanged);
-            // 
-            // namaCheckOutTextBox
-            // 
-            this.namaCheckOutTextBox.Location = new System.Drawing.Point(175, 130);
-            this.namaCheckOutTextBox.Name = "namaCheckOutTextBox";
-            this.namaCheckOutTextBox.Size = new System.Drawing.Size(158, 22);
-            this.namaCheckOutTextBox.TabIndex = 0;
-            this.namaCheckOutTextBox.TextChanged += new System.EventHandler(this.namaCheckOutTextBox_TextChanged);
             // 
             // panel4
             // 
@@ -743,33 +711,31 @@
             this.panel4.Controls.Add(this.comboBoxJasa);
             this.panel4.Controls.Add(this.BtnPesanJasa);
             this.panel4.Controls.Add(this.listBoxJasa);
-            this.panel4.Location = new System.Drawing.Point(171, 49);
+            this.panel4.Location = new System.Drawing.Point(128, 40);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(550, 300);
+            this.panel4.Size = new System.Drawing.Size(412, 244);
             this.panel4.TabIndex = 0;
             // 
-            // listBoxJasa
+            // label21
             // 
-            this.listBoxJasa.FormattingEnabled = true;
-            this.listBoxJasa.ItemHeight = 16;
-            this.listBoxJasa.Items.AddRange(new object[] {
-            "1. Sarapan",
-            "2. Makan malam",
-            "3. Pembersihan kamar"});
-            this.listBoxJasa.Location = new System.Drawing.Point(39, 58);
-            this.listBoxJasa.Name = "listBoxJasa";
-            this.listBoxJasa.Size = new System.Drawing.Size(167, 100);
-            this.listBoxJasa.TabIndex = 0;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(215, 41);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(79, 13);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Pilih Pelayanan";
             // 
-            // BtnPesanJasa
+            // label19
             // 
-            this.BtnPesanJasa.Location = new System.Drawing.Point(289, 131);
-            this.BtnPesanJasa.Name = "BtnPesanJasa";
-            this.BtnPesanJasa.Size = new System.Drawing.Size(98, 24);
-            this.BtnPesanJasa.TabIndex = 1;
-            this.BtnPesanJasa.Text = "Pesan";
-            this.BtnPesanJasa.UseVisualStyleBackColor = true;
-            this.BtnPesanJasa.Click += new System.EventHandler(this.BtnPesanJasa_Click);
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(27, 24);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(123, 13);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Pelayanan yang tersedia";
             // 
             // comboBoxJasa
             // 
@@ -778,20 +744,79 @@
             "1. Sarapan",
             "2. Makan malam",
             "3. Pembersihan kamar"});
-            this.comboBoxJasa.Location = new System.Drawing.Point(289, 81);
+            this.comboBoxJasa.Location = new System.Drawing.Point(217, 66);
+            this.comboBoxJasa.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxJasa.Name = "comboBoxJasa";
-            this.comboBoxJasa.Size = new System.Drawing.Size(98, 24);
+            this.comboBoxJasa.Size = new System.Drawing.Size(74, 21);
             this.comboBoxJasa.TabIndex = 2;
+            // 
+            // BtnPesanJasa
+            // 
+            this.BtnPesanJasa.Location = new System.Drawing.Point(217, 106);
+            this.BtnPesanJasa.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnPesanJasa.Name = "BtnPesanJasa";
+            this.BtnPesanJasa.Size = new System.Drawing.Size(74, 20);
+            this.BtnPesanJasa.TabIndex = 1;
+            this.BtnPesanJasa.Text = "Pesan";
+            this.BtnPesanJasa.UseVisualStyleBackColor = true;
+            this.BtnPesanJasa.Click += new System.EventHandler(this.BtnPesanJasa_Click);
+            // 
+            // listBoxJasa
+            // 
+            this.listBoxJasa.FormattingEnabled = true;
+            this.listBoxJasa.Items.AddRange(new object[] {
+            "1. Sarapan",
+            "2. Makan malam",
+            "3. Pembersihan kamar"});
+            this.listBoxJasa.Location = new System.Drawing.Point(29, 47);
+            this.listBoxJasa.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxJasa.Name = "listBoxJasa";
+            this.listBoxJasa.Size = new System.Drawing.Size(126, 82);
+            this.listBoxJasa.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.panel5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Size = new System.Drawing.Size(676, 330);
+            this.tabPage3.TabIndex = 5;
+            this.tabPage3.Text = "Riwayat Reservasi";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnRiwayat);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Location = new System.Drawing.Point(151, 57);
+            this.panel5.Location = new System.Drawing.Point(113, 46);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(617, 300);
+            this.panel5.Size = new System.Drawing.Size(463, 244);
             this.panel5.TabIndex = 0;
+            // 
+            // btnRiwayat
+            // 
+            this.btnRiwayat.Location = new System.Drawing.Point(194, 191);
+            this.btnRiwayat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRiwayat.Name = "btnRiwayat";
+            this.btnRiwayat.Size = new System.Drawing.Size(56, 19);
+            this.btnRiwayat.TabIndex = 2;
+            this.btnRiwayat.Text = "Refresh";
+            this.btnRiwayat.UseVisualStyleBackColor = true;
+            this.btnRiwayat.Click += new System.EventHandler(this.btnRiwayat_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(166, 12);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(121, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Data Riwayat Reservasi";
             // 
             // dataGridView1
             // 
@@ -802,31 +827,13 @@
             this.Column1,
             this.Column3,
             this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(33, 51);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 41);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(550, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(412, 122);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(221, 15);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(152, 16);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Data Riwayat Reservasi";
-            // 
-            // btnRiwayat
-            // 
-            this.btnRiwayat.Location = new System.Drawing.Point(258, 235);
-            this.btnRiwayat.Name = "btnRiwayat";
-            this.btnRiwayat.Size = new System.Drawing.Size(75, 23);
-            this.btnRiwayat.TabIndex = 2;
-            this.btnRiwayat.Text = "Refresh";
-            this.btnRiwayat.UseVisualStyleBackColor = true;
-            this.btnRiwayat.Click += new System.EventHandler(this.btnRiwayat_Click);
             // 
             // Nama
             // 
@@ -863,35 +870,195 @@
             this.Column2.Name = "Column2";
             this.Column2.Width = 50;
             // 
-            // label19
+            // tabPage4
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(36, 29);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(157, 16);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "Pelayanan yang tersedia";
+            this.tabPage4.Controls.Add(this.checkOutButton);
+            this.tabPage4.Controls.Add(this.label8);
+            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Controls.Add(this.noKamarCheckOutTextBox);
+            this.tabPage4.Controls.Add(this.namaCheckOutTextBox);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Size = new System.Drawing.Size(676, 330);
+            this.tabPage4.TabIndex = 6;
+            this.tabPage4.Text = "CheckOut";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // label21
+            // checkOutButton
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(287, 51);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(100, 16);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "Pilih Pelayanan";
+            this.checkOutButton.Location = new System.Drawing.Point(254, 196);
+            this.checkOutButton.Margin = new System.Windows.Forms.Padding(2);
+            this.checkOutButton.Name = "checkOutButton";
+            this.checkOutButton.Size = new System.Drawing.Size(150, 42);
+            this.checkOutButton.TabIndex = 4;
+            this.checkOutButton.Text = "CheckOut";
+            this.checkOutButton.UseVisualStyleBackColor = true;
+            this.checkOutButton.Click += new System.EventHandler(this.checkOutButton_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(415, 90);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "No Kamar";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(129, 90);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Nama";
+            // 
+            // noKamarCheckOutTextBox
+            // 
+            this.noKamarCheckOutTextBox.Location = new System.Drawing.Point(417, 106);
+            this.noKamarCheckOutTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.noKamarCheckOutTextBox.Name = "noKamarCheckOutTextBox";
+            this.noKamarCheckOutTextBox.Size = new System.Drawing.Size(120, 20);
+            this.noKamarCheckOutTextBox.TabIndex = 1;
+            this.noKamarCheckOutTextBox.TextChanged += new System.EventHandler(this.noKamarCheckOutTextBox_TextChanged);
+            // 
+            // namaCheckOutTextBox
+            // 
+            this.namaCheckOutTextBox.Location = new System.Drawing.Point(131, 106);
+            this.namaCheckOutTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.namaCheckOutTextBox.Name = "namaCheckOutTextBox";
+            this.namaCheckOutTextBox.Size = new System.Drawing.Size(120, 20);
+            this.namaCheckOutTextBox.TabIndex = 0;
+            this.namaCheckOutTextBox.TextChanged += new System.EventHandler(this.namaCheckOutTextBox_TextChanged);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.SubmitReviewButton);
+            this.tabPage5.Controls.Add(this.commentTextBox);
+            this.tabPage5.Controls.Add(this.label27);
+            this.tabPage5.Controls.Add(this.ratingTextBox);
+            this.tabPage5.Controls.Add(this.label26);
+            this.tabPage5.Controls.Add(this.roomNumberTextBox);
+            this.tabPage5.Controls.Add(this.label25);
+            this.tabPage5.Controls.Add(this.label24);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(676, 330);
+            this.tabPage5.TabIndex = 7;
+            this.tabPage5.Text = "Ulasan Kamar";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // SubmitReviewButton
+            // 
+            this.SubmitReviewButton.Location = new System.Drawing.Point(475, 125);
+            this.SubmitReviewButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.SubmitReviewButton.Name = "SubmitReviewButton";
+            this.SubmitReviewButton.Size = new System.Drawing.Size(113, 40);
+            this.SubmitReviewButton.TabIndex = 8;
+            this.SubmitReviewButton.Text = "Submit Ulasan";
+            this.SubmitReviewButton.UseVisualStyleBackColor = true;
+            this.SubmitReviewButton.Click += new System.EventHandler(this.SubmitReviewButton_Click);
+            // 
+            // commentTextBox
+            // 
+            this.commentTextBox.Location = new System.Drawing.Point(239, 218);
+            this.commentTextBox.Multiline = true;
+            this.commentTextBox.Name = "commentTextBox";
+            this.commentTextBox.Size = new System.Drawing.Size(193, 72);
+            this.commentTextBox.TabIndex = 7;
+            this.commentTextBox.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(298, 184);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(73, 13);
+            this.label27.TabIndex = 6;
+            this.label27.Text = "Ulasan Kamar";
+            // 
+            // ratingTextBox
+            // 
+            this.ratingTextBox.Location = new System.Drawing.Point(282, 146);
+            this.ratingTextBox.Name = "ratingTextBox";
+            this.ratingTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ratingTextBox.TabIndex = 5;
+            this.ratingTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(298, 115);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(71, 13);
+            this.label26.TabIndex = 4;
+            this.label26.Text = "Rating Kamar";
+            // 
+            // roomNumberTextBox
+            // 
+            this.roomNumberTextBox.Location = new System.Drawing.Point(281, 68);
+            this.roomNumberTextBox.Name = "roomNumberTextBox";
+            this.roomNumberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.roomNumberTextBox.TabIndex = 3;
+            this.roomNumberTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(298, 42);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(54, 13);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "No Kamar";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(22, 26);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(66, 13);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Rating Hotel";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.reviewLabel);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(676, 330);
+            this.tabPage6.TabIndex = 8;
+            this.tabPage6.Text = "Lihat Ulasan";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // reviewLabel
+            // 
+            this.reviewLabel.AutoSize = true;
+            this.reviewLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.reviewLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reviewLabel.Location = new System.Drawing.Point(3, 3);
+            this.reviewLabel.Name = "reviewLabel";
+            this.reviewLabel.Size = new System.Drawing.Size(0, 13);
+            this.reviewLabel.TabIndex = 0;
+            this.reviewLabel.Click += new System.EventHandler(this.reviewLabel_Click);
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1259, 566);
+            this.ClientSize = new System.Drawing.Size(944, 460);
             this.Controls.Add(this.tabAryaHotel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
@@ -913,14 +1080,18 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -998,5 +1169,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button SubmitReviewButton;
+        private System.Windows.Forms.TextBox commentTextBox;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox ratingTextBox;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox roomNumberTextBox;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Label reviewLabel;
     }
 }
