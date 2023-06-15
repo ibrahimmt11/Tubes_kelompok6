@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Aplikasi_Hotel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -556,5 +557,109 @@ namespace AplikasiHotel
             return false; // Pesanan belum ada dalam daftarPesanan
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        HotelReviewSystem<int> hotelReviews = new HotelReviewSystem<int>();
+
+        private void SubmitReviewButton_Click(object sender, EventArgs e)
+        {
+            int roomNumber;
+            string submitUlasan = roomNumberTextBox.Text;
+
+            bool isValidRoomNumber = int.TryParse(submitUlasan, out roomNumber) &&
+                ((roomNumber >= 101 && roomNumber <= 109) ||
+                 (roomNumber >= 201 && roomNumber <= 209) ||
+                 (roomNumber >= 301 && roomNumber <= 309));
+
+            if (!isValidRoomNumber)
+            {
+                ShowErrorMessage("Nomor Kamar tidak valid. Mohon masukkan angka antara 101 - 109, 201 - 209, 301 - 309.");
+                return;
+            }
+
+            int rating;
+            string ratingInput = ratingTextBox.Text;
+
+            bool isValidRating = int.TryParse(ratingInput, out rating) && rating >= 1 && rating <= 5;
+
+            if (!isValidRating)
+            {
+                ShowErrorMessage("Rating tidak valid. Mohon masukkan angka antara 1 hingga 5.");
+                return;
+            }
+
+            string comment = commentTextBox.Text;
+
+            ReviewKamar<int> review = new ReviewKamar<int>
+            {
+                RoomNumber = roomNumber,
+                Rating = rating,
+                Comment = comment
+            };
+
+            hotelReviews.AddReview(review);
+            ShowSuccessMessage("Ulasan berhasil ditambahkan.");
+
+            UpdateReviewLabel(); //update label pada fitur lihat ulasan
+
+            ClearInputFields(); // mengosongkan inputan
+        }
+
+        private void UpdateReviewLabel()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            List<ReviewKamar<int>> allReviews = hotelReviews.GetReviews();
+
+            sb.AppendLine("-- Ulasan Kamar --");
+            sb.AppendLine();
+
+            foreach (ReviewKamar<int> review in allReviews)
+            {
+                sb.AppendFormat("Kamar {0}:\n", review.RoomNumber);
+                sb.AppendFormat("Rating: {0}/5\n", review.Rating);
+                sb.AppendFormat("Komentar: {0}\n\n", review.Comment);
+            }
+
+            reviewLabel.Text = sb.ToString(); // mengupdate teks yang ditampilkan pada kontrol
+        }
+
+        private void reviewLabel_Click(object sender, EventArgs e)
+        {
+            UpdateReviewLabel(); // memanggil fungsi UpdateReviewLabel untuk ditampilkan di label
+        }
+
+        private void ShowErrorMessage(string message)
+        {
+            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void ShowSuccessMessage(string message)
+        {
+            MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ClearInputFields()
+        {
+            roomNumberTextBox.Text = string.Empty;
+            ratingTextBox.Text = string.Empty;
+            commentTextBox.Text = string.Empty;
+        }
+
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
